@@ -1,0 +1,130 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #ff5c00;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 0;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.container {
+    padding: 20px;
+}
+.about{
+    text-align: center;
+    background-color: #444;
+    margin: 0;
+    color: #ddd;
+}
+footer {
+  padding: 5px; /* Reduce padding */
+  position: relative; /* Remove fixed positioning */
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+.hero {
+    padding: 0;
+    text-align: center;
+}
+.services, .about, .contact, .products {
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Product Gallery */
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.product-item h3 {
+    margin: 10px 0;
+}
+.product-item p {
+    color: #555;
+}
+.sticker-gallery {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between stickers */
+    flex-wrap: wrap; /* Allow wrapping if necessary */
+}
+
+.sticker {
+    display: inline-block; /* Fit around each image */
+    border: 2px solid #fff; /* White border around the sticker */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px; /* Space between image and border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: #f9f9f9; /* Background color */
+    margin: 10px; /* Optional spacing around each sticker */
+    flex: 1; /* Allows stickers to grow/shrink equally */
+    max-width: 200px; /* Limit max width of each sticker */
+}
+
+.sticker img {
+    max-width: 100%; /* Ensure images fit within their sticker */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Optional: Adding a hover effect */
+.sticker:hover {
+    transform: scale(1.05); /* Slightly enlarge the sticker on hover */
+    transition: transform 0.3s; /* Smooth transition */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    /* Adjust grid for tablets */
+    .product-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    /* Stack items in one column for mobile devices */
+    .product-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make navigation vertical for small screens */
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+}
