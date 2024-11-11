@@ -4,9 +4,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: white;
 }
 header {
-    background-color: #ff5c00;
+    background-color: orange;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
@@ -14,7 +15,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #444;
+    background-color: red;
     padding: 10px;
     margin-bottom: 0;
 }
@@ -31,7 +32,7 @@ nav a:hover {
 }
 .about{
     text-align: center;
-    background-color: #444;
+    background-color: red;
     margin: 0;
     color: #ddd;
 }
@@ -47,10 +48,42 @@ footer {
 .hero {
     padding: 0;
     text-align: center;
+    background-color: red;
 }
+
+/*The white-space: nowrap; property keeps the text on a single line.
+overflow: hidden; hides any text that moves outside the container.
+The @keyframes scroll defines the animation, which moves the text from right to left continuously.*/
+
+.scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+  }
+
+  /* Repeating text style */
+  .scrolling-text {
+    display: inline-block;
+    padding-right: 100%; /* Adjust space between repeats */
+    animation: scroll 60s linear infinite;
+  }
+
+  /* Scroll keyframes */
+  @keyframes scroll {
+    from {
+      transform: translateX(120%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
 .services, .about, .contact, .products {
     margin: 0;
     padding: 20px 0;
+}
+#product{
+    text-align: center;
 }
 
 /* Product Gallery */
@@ -63,6 +96,7 @@ footer {
     border: 1px solid #ddd;
     padding: 15px;
     text-align: center;
+    background-color: #ddd;
 }
 .product-item img {
     max-width: 100%;
@@ -128,3 +162,4 @@ footer {
         margin: 10px 0;
     }
 }
+
