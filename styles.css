@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
+    background-color: brown;
 }
 header {
     background-color: orange;
@@ -15,7 +15,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: red;
+    background-color: orange;
     padding: 10px;
     margin-bottom: 0;
 }
@@ -28,12 +28,19 @@ nav a:hover {
     text-decoration: underline;
 }
 .container {
-    padding: 20px;
+    padding: 10px;
 }
 .about{
     text-align: center;
-    background-color: red;
+    background-color: brown;
     margin: 0;
+    color: black;
+    margin-top: 0;
+    padding-top: 0;
+}
+.about h2{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
     color: #ddd;
 }
 footer {
@@ -86,17 +93,27 @@ The @keyframes scroll defines the animation, which moves the text from right to 
     text-align: center;
 }
 
+
+
 /* Product Gallery */
+.products h2{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ddd;
+}
+h3{
+    color: white;
+}
 .product-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    background-color: brown;
 }
 .product-item {
     border: 1px solid #ddd;
     padding: 15px;
     text-align: center;
-    background-color: #ddd;
+    background-color: black;
 }
 .product-item img {
     max-width: 100%;
@@ -117,7 +134,7 @@ The @keyframes scroll defines the animation, which moves the text from right to 
 
 .sticker {
     display: inline-block; /* Fit around each image */
-    border: 2px solid #fff; /* White border around the sticker */
+    
     border-radius: 10px; /* Rounded corners */
     padding: 10px; /* Space between image and border */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -125,6 +142,7 @@ The @keyframes scroll defines the animation, which moves the text from right to 
     margin: 10px; /* Optional spacing around each sticker */
     flex: 1; /* Allows stickers to grow/shrink equally */
     max-width: 200px; /* Limit max width of each sticker */
+    background-color: brown;
 }
 
 .sticker img {
@@ -161,5 +179,21 @@ The @keyframes scroll defines the animation, which moves the text from right to 
     nav a {
         margin: 10px 0;
     }
+}
+
+
+.contact h2{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ddd;
+}
+
+
+.follow{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ddd;
+    padding-bottom: 0;
+    margin-bottom: 10px;
 }
 
